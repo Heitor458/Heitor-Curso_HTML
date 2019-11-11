@@ -24,4 +24,10 @@ Bool
 ##### Variáveis e Constantes:
 serve para que consiga rotular um determinado valor que vai estar guardado na memória do computador e dizer o que esse valor irá representar.
 e utilizar esses dados para fazer operações lógicas, Aritméticas, Relacional.
- 
+
+##### Como JS é organizado:
+JS é organizado em sentença de Código , podem ou não terminar em ponto e virgula
+e são organizados por blocos de códigos que são delimitados por chaves.
+
+exemplo de sententa:
+`console.log('olá Mundo!')`
