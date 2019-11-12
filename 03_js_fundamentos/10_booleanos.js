@@ -21,7 +21,7 @@ console.log('Os Falsos...');
 console.log(!!0);
 console.log(!!'');
 console.log(!!null);
-console.log(!!NaN);
+console.log(!!NaN);// Not a number
 console.log(!!undefined);
 console.log(!!(isAtivo = false));
 
