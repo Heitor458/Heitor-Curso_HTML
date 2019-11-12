@@ -3,7 +3,7 @@ console.log(valor); // Retorna Undefined
 
 valor = null  // Ausência de valor e que não aponta para nenhum Local na memória 
 console.log(valor); 
-// console.log(valor.toString())// Vai dar Ero !! porque está null
+// console.log(valor.toString())// Vai dar Ero !!
 
 const produto = {}
 console.log(produto.preco)
