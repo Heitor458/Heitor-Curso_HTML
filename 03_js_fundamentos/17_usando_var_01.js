@@ -4,18 +4,20 @@
     {
 
         {
-            { var sera = 'Será ?' } // Exemplo de escopo Global 
+            {
+                var sera = 'Será ?'
+                console.log('Dentro =', sera);
+            } // Exemplo de variavel Global 
         }
     }
 }
-console.log(sera);
+console.log('Fora =', sera);
 
 
-function teste(){ // Variavel n global e essa variavel só fica visivel dentro da function 
+function teste() { // Variavel n global e essa variavel só fica visivel dentro da function 
     var local = 123
     console.log(local);
 }
 teste()
-
 //Conselho JS Fuja Do escopo Global.
 
