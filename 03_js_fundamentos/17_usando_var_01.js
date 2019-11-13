@@ -16,3 +16,6 @@ function teste(){ // Variavel n global e essa variavel só fica visivel dentro d
     console.log(local);
 }
 teste()
+
+//Conselho JS Fuja Do escopo Global.
+
