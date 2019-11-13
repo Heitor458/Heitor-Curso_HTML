@@ -4,7 +4,7 @@
     {
 
         {
-            { var sera = 'Será ?' } 
+            { var sera = 'Será ?' } // Exemplo de escopo Global 
         }
     }
 }
