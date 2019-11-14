@@ -21,3 +21,29 @@ const obj3 = new Obj('Mesa')
 console.log(obj2.nome);
 console.log(obj3.nome);
 //notção ponto é uma forma que tenho acesso os  mmenbros de um Ojeto  ou de uma função apartir de notação ponto.
+
+// outro exemplo 
+
+var pessoa = {
+    nome: ['Bob', 'Smith'],
+    idade: 32,
+    sexo: 'Masculino',
+    interesse: ['Música', 'Esquiar'],
+    bio: function () {
+        return this.nome[0] + ' ' + this.nome['1'] +
+            ' tem ' + this.idade + ' Anos de idade.' +
+            ' Ele Gosta de ' + this.interesse[0] + ' e ' + this.interesse[1] + '.'
+    },
+    saudacao: function () {
+        return 'Oi! Eu sou ' + this.nome[0] + '.'
+    }
+}
+console.log(pessoa.nome);
+console.log(pessoa.nome[0]);
+console.log(pessoa.idade);
+console.log(pessoa.bio());
+console.log(pessoa.saudacao());
+
+
+
+
