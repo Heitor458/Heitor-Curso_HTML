@@ -1,7 +1,8 @@
 console.log(Math.ceil(6.1)); // Arredondar para cima 
 
 const obj1 = {}
-obj1.nome = 'Bola'
+obj1.nome = 'Bola' // o uso do ponto serve para criar ou acessar um atributo 
+obj1['nome'] = 'Bola2' // Outra forma de declarar um atributo 
 obj1.tamanho = 'Grande'
 console.log(obj1.nome);
 
