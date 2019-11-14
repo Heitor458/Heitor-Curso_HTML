@@ -16,10 +16,5 @@ assim definindo o molde de uma estrutura , suas funções e variaveis...
 */
 
 /*link sobre o assunto:  https://www.devmedia.com.br/poo-trabalhando-com-classes-e-objetos-em-javascript/28434
-                        https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Guide/Trabalhando_com_Objetos*/
-
-
-
-
-
-
+                        https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Guide/Trabalhando_com_Objetos
+                        https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Guide/Fun%C3%A7%C3%B5es  */
