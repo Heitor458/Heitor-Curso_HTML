@@ -14,3 +14,4 @@ console.log(++num1 === num2);
  acrescenta +1 no num1 >>
   compara com o num 2 , após a comparação 
   mude o resultado de num 2*/
+ 
