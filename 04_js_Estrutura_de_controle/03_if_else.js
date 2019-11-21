@@ -7,4 +7,4 @@ const imprimirResultado = function(nota){
 }
 imprimirResultado(7);
 imprimirResultado(5);
-imprimirResultado('EPA !') /*Cuidado com a tipagem fraca pois o console irá retornar Reprovado * /
+imprimirResultado('EPA !') /*Cuidado com a tipagem fraca pois o console irá retornar Reprovado */
