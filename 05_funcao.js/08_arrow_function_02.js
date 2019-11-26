@@ -1,10 +1,17 @@
-function pessoa(){
+function pessoa() {
     this.idade = 0
 
-    setInterval(() => {
-      this.idade++
-      console.log(this.idade);
-        
-    },0.1);
+    this.blablabla = function () {
+        (function () {
+            this.idade = 2
+            this.idade++
+            console.log(this.idade);
+
+        })();
+    };
 }
-new pessoa
+var p;
+( p = new pessoa).blablabla();
+console.log(p.idade);
+
+
