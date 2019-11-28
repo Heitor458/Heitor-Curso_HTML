@@ -23,7 +23,7 @@ function criarPessoa(){
 }
 console.log(criarPessoa());
 
-
+// Exemplo da aula  82.Função Factory #02
 function cirarProduto(nome,preco,lancamento,) {
     return {
         nome,preco,lancamento,
