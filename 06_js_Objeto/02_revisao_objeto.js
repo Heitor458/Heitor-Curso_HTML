@@ -34,5 +34,8 @@ valor:8900,
 }
 }
 carro.proprietarios.endereco.logradouro = 1000
+/* interessate declarar dessa forma apartir de strigns quando tem o nome dos produtos atraves de strings  via introspecção : 
+Quando você consegue  os dasdos de um Objeto apartir de um algoritimo */
+carro['proprietarios']['endereco']['logradouro']
 console.log(carro)
 console.log(carro.condutores.length)
