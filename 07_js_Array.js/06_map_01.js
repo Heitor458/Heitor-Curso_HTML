@@ -17,12 +17,12 @@ let resultado = nums.map(function (e) {
 
 console.log(resultado)
 
-const soma10 = function(e){
+const soma10 = function (e) {
     return e + 10
 }
 
 const tirplo = e => e * 3
-const paraDinheiro = e => `R$ ${parseFloat(e).toFixed(2).replace('.',',')}`// parsefloat : , tofixed(2): para fixa em duas cassas decimais , replace('.',',') para substituir ponto por virgula
+const paraDinheiro = e => `R$ ${parseFloat(e).toFixed(2).replace('.', ',')}`// parsefloat : , tofixed(2): para fixa em duas cassas decimais , replace('.',',') para substituir ponto por virgula
 
 resultado = nums.map(soma10).map(tirplo).map(paraDinheiro)
 console.log(resultado);
