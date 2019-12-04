@@ -1,4 +1,4 @@
-// o código abaixo retrata de como funciona o map pode debaixo dos panos 
+// o código abaixo retrata  como funciona o map pode debaixo dos panos 
 Array.prototype.map2 = function (callback) {
     const newAray = []
     for (let i = 0; i < this.length; i++) {
