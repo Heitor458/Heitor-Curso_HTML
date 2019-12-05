@@ -18,5 +18,7 @@ const carrinho = [
 const paraObjeto = json => JSON.parse(json)
 const apenaspreco = produto => produto.preco
 
-const resultado = carrinho.map2(paraObjeto).map2(apenaspreco)
+const resultado = carrinho
+    .map2(paraObjeto)
+    .map2(apenaspreco)
 console.log(resultado);
