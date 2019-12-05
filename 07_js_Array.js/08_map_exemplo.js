@@ -27,4 +27,3 @@ console.log(numero2);
 const nomes = ['Killer', 'Heitor', 'Guilherme', 'Ricardo']
 const nomes2 = nomes.map(nomes2 => nomes2.toLocaleLowerCase())
 
-console.log(nomes2);
