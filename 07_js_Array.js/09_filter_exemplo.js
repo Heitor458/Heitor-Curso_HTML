@@ -18,9 +18,10 @@ const numF = numeros.filter(function (numero) {
     if ((numero % 2 === 0)) {
         return true
     }
-    console.log('pritando Numeros Multiplos de dois  com Filter', numF);
 })
+console.log('pritando Numeros Multiplos de dois  com Filter', numF);
 
 // Usando o Filter com Arrow Function 
-const numerosFiltrados = numeros.filter(numerosFiltrados => numerosFiltrados % 2 === 0)
-console.log('Printando Números Multiplos de dois com Filter e Arrow Function', numerosFiltrados);
+ const resultado = numeros.filter(numero => numero % 2 === 0).map(numero => numero *2);
+console.log('Printando Numeros Multiplos de dois com filter e map e arrow function',resultado);
+
