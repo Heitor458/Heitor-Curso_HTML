@@ -1,5 +1,5 @@
 const _ = require('lodash')
-setInterval(() => console.log(_.random(1, 1000)), 2000);
+setInterval(() => console.log(_.random(10, 1000)), 2000);
 
 /* Nessa Aula instalamos o lodash
 usando o comando : npm i lodash  no caminho c:\laragon\www\curso_web_moderno\08_js_Node>*/

@@ -14,7 +14,3 @@ console.log(moduloA.BemVindo);
 console.log(moduloA.atelogo);
 console.log(moduloA);
 console.log(moduloB.boaNoite());
-
-
-
-
