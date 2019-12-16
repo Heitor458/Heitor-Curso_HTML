@@ -2,7 +2,7 @@ const url = 'http://files.cod3r.com.br/curso-js/funcionarios.json'
 const axios = require('axios') //importando o axios
 
 //Resolvendo Desafio !
-const chineses = f => f.paises === 'Chine'
+const chineses = f => f.paises === 'China'
 const mulheres = f => f.genero === 'F'
 const menorSalario = (func, funcAtual) => {
     return fun.salario < funcAtual.salario ? func : funcAtual
