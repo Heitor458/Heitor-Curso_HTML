@@ -13,7 +13,7 @@ setTimeout(function(){
 
 // Outras possibilidades de temporrizadores 
 
-//setImmediate :
+//setImmediate 
 //setInterval : Disparar uma função de tempos em tempos 
 
 const regra = new schedule.RecurrenceRule()
