@@ -1,3 +1,6 @@
+/* A função a seguir faz: 
+ Se não for um Valor númerico (isNaN) retorna o proprio numero   ,
+ se for um valor numerico  chama valor.toFixed(2) que irá retornar um valor com duas casas decimais*/
 function real(partes, ...valores) {
     const resultado = []
     valores.forEach((valor, indice) => {
