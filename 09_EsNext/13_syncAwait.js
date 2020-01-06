@@ -27,7 +27,7 @@ const getTurma = (letra) => {
 let obterAlunos = async () => {
     const turmaA = await getTurma('A')
     const turmaB = await getTurma('B')
-    const turmaC = await getTurma('C')
+    const turmaC = await getTurma('C') 
     return [].concat(turmaA, turmaB, turmaC)
 } // Mesmo tendo um array como retorno ele irá retornar um Objeto AsyncFunction
 
