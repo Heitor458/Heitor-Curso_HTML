@@ -1,0 +1,75 @@
+<div wm-sçider>
+    <p>
+        <img src="http://files.cod3r.com.br/curso-web/imagem1.jpg" alt="Muro da Cidade" width="513" height="342"
+            title="Muro da Cidade por Tarso Bessa">
+    </p>
+    <p>
+        <img src="https://www.blogson.com.br/wp-content/uploads/2017/10/loading-gif-transparent-10.gif"
+            alt="Loading gif">
+    </p>
+    <p class="circular">
+        <img src="http://files.cod3r.com.br/curso-web/imagem3.png" alt="Rio de Janeiro" height="342">
+    </p>
+    <p class="texto">
+        <img src="http://files.cod3r.com.br/curso-web/avatar.jpg" alt="Avatar" height="50" align="left">
+        TEXTO: içdhfahfiidçfihdçafhdç içdhfahfiidçfihdçafhdç içdhfahfiidçfihdçafhdç içdhfahfiidçfihdçafhdç
+        içdhfahfiidçfihdçafhdç
+        içdhfahfiidçfihdçafhdç içdhfahfiidçfihdçafhdç içdhfahfiidçfihdçafhdç
+        içdhfahfiidçfihdçafhdç içdhfahfiidçfihdçafhdç içdhfahfiidçfihdçafhdç
+        içdhfahfiidçfihdçafhdç içdhfahfiidçfihdçafhdç içdhfahfiidçfihdçafhdç
+        içdhfahfiidçfihdçafhdç içdhfahfiidçfihdçafhdç
+    </p>
+    <p class="cidade">
+
+    </p>
+    <p>
+        <picture>
+            <source srcset="http://files.cod3r.com.br/curso-web/logo-larga.png" media="(min-width:600px)">
+            <img src="http://files.cod3r.com.br/curso-web/logo-estreita.png">
+        </picture>
+    </p>
+</div>
+
+<style>
+    p {
+        position: absolute;
+        display: none;
+    }
+
+    .circular {
+        width: 513px;
+        background-color: #444;
+    }
+
+    .texto {
+        width: 400px;
+    }
+
+    .texto img {
+        margin-right: 10px;
+
+    }
+
+    .cidade {
+        widows: 513px;
+        height: 324;
+        background-image: url('http://files.cod3r.com.br/curso-web/imagem4.jpg');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 200%;
+    }
+</style>
+
+<script>
+    function mover(elem, inicio, fim, passo, callback) {
+        const novoInicio = inicio - passo
+        if (novoInicio >= fim) {
+            elem.style.left = novoInicio + 'px'
+            setTimeout(() => mover(elem, novoInicio, fim, passo, callback), 7)
+        } else {
+            callback()
+        }
+    }
+    const p = document.querySelector('[wm-slider] > p')
+    p.style.display = 'block'
+</script>
