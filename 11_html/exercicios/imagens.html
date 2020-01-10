@@ -48,15 +48,6 @@
         margin-right: 10px;
 
     }
-
-    .cidade {
-        widows: 513px;
-        height: 324;
-        background-image: url('http://files.cod3r.com.br/curso-web/imagem4.jpg');
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: 200%;
-    }
 </style>
 
 <script>
@@ -64,7 +55,7 @@
         const novoInicio = inicio - passo
         if (novoInicio >= fim) {
             elem.style.left = novoInicio + 'px'
-            setTimeout(() => mover(elem, novoInicio, fim, passo, callback), 7)
+            setTimeout(() => mover(elem, novoInicio, fim, passo, callback), 25)
         } else {
             callback()
         }
