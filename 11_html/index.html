@@ -40,10 +40,14 @@
                     fetch(link.href + '?nocache=' + (new Date).getTime())
                         .then(resp => resp.text())
                         .then(html => conteudo.innerHTML = html)
+                        .then(html => {
+                            conteudo.querySelectorAll('script').forEach(elem => {
+                                const script = elem.innerText
+                                eval(script)
+                            })
+                        })
                         .catch(er => console.error(er))
                 }
             })
         </script>
     </body>
-
-</html>
