@@ -1,16 +1,38 @@
 <!DOCTYPE html>
 <html>
 
-<head>
-    <meta charset="UTF-8">
-    <title>Especificidade CSS</title>
-    <style>
-        /* https://developer.mozilla.org/pt-BR/docs/Web/CSS/Specificity */
-    </style>
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <title>Especificidade CSS</title>
+        <style>
+            /* https://developer.mozilla.org/pt-BR/docs/Web/CSS/Specificity */
+            /* Ordem de especifidade
+            Em Linhas Gerais...
+            1. regra com !important
+            2.seletores mais específicos
+            3. última regra processada (empa)
+        */
+            p {
+                background-color: #aaa;
+            }
 
-<body>
-    <p class='observacao'>Olha essa observação!!!!</p>
-</body>
+            .observacao {
+                background-color: #5f5;
+                border: dashed 5px;
+                padding: 200px;
+                font-size: 40px;
+            }
+
+            /* Esse o nivel de especificidade é maior  ou seja esse é o que será aplicado  */
+            p.observacao {
+                padding: 20px;
+                background: linear-gradient(to right, red, yellow)
+            }
+        </style>
+    </head>
+
+    <body>
+        <p class='observacao'>Olha essa observação!!!!</p>
+    </body>
 
 </html>
