@@ -53,7 +53,23 @@
                 color: #ff0;
                 background-color: #f77;
             } */
-            
+            /* Seletores que envolva filhos nesse caso pegue o primeiro filho de alguém que é do tipo span */
+            /* span:nth-child(1) {
+                color: #ff0;
+                background-color: #f77;
+            } */
+            /* Aqui estou fazendo com que o CSS se aplique soamente aos elementos Impares Usando o ODD como parametro ou EVEN para números Pares */
+            /* section> :nth-child(odd) {
+                color: #ff0;
+                background-color: #f77;
+            } */
+            /* Usando seletores Multiplos */
+            section> :nth-child(odd),
+            label,
+            p {
+                color: #ff0;
+                background-color: #f77;
+            }
         </style>
     </head>
 
@@ -76,7 +92,7 @@
                 </ol>
                 <div id='aninhado' class='tag'>
                     <div class="tag">
-                        <section class='tag'>
+                        <section class='tag nolabel'>
                             <span class='tag'>1</span>
                             <p class='tag'>2</p>
                             <span class='tag'>3</span>
