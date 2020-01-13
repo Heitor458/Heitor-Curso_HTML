@@ -1,44 +1,91 @@
 <!DOCTYPE html>
 <html>
 
-<head>
-    <meta charset="UTF-8">
-    <title>CSS Selectors</title>
-    <link rel="stylesheet" href="css/tag.css">
-    <style>
-        /* ... */
-    </style>
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <title>CSS Selectors</title>
+        <link rel="stylesheet" href="css/tag.css">
+        <style>
+            /* Seletore universal  */
 
-<body>
-    <div class='tag'>
+            /* * { color: aqua;
+                background-color: white; } */
+
+
+            /* Sletor de Classe */
+            /* .tag {
+                color: blueviolet;
+                background-color: white;} */
+
+
+            /* Seletores ID */
+            /* #aprovados {
+                background-color: greenyellow;
+                color: gold;} */
+
+
+            /* Seletores conjunto nesse caso pegar a div  que esta dentro de aninhado   */
+            /* #aninhado> div {
+                    background-color: mediumaquamarine;
+                    color: yellow;
+                } */
+
+            /* Seletor  de irmão Asibling que são adjacentes ou seja um esta logo em seguida do outro */
+            /* p+ul {
+                color: teal;
+                background-color: thistle;
+            } */
+            /* seletores General Sibling */
+            /* p~ol {
+                color: #ff0;
+                background-color: #f77 ;
+            } */
+
+            /* Seletores  */
+            /* [feira=casa] {
+                color: #ff0;
+                background-color: #f77;
+                
+            } */
+
+            /* Caso queira filtrar o Seletore por letra utilize '*=' e as letras que deseja que seja filtradas nesse exemplo SA */
+            /* [feira *=sa] {
+                color: #ff0;
+                background-color: #f77;
+            } */
+            
+        </style>
+    </head>
+
+    <body>
         <div class='tag'>
-            <p class='tag'>1</p>
-            <ul class='tag' feira='casa'>
-                <li>Arroz</li>
-                <li>Feijão</li>
-            </ul>
-            <ul class='tag' feira='escritorio empresa'>
-                <li>Café</li>
-                <li>Água</li>
-            </ul>
-            <ol id='aprovados' class='tag'>
-                <li>Maria</li>
-                <li>Pedro</li>
-                <li>Ana</li>
-            </ol>
-            <div id='aninhado' class='tag'>
-                <div class="tag">
-                    <section class='tag'>
-                        <span class='tag'>1</span>
-                        <p class='tag'>2</p>
-                        <span class='tag'>3</span>
-                    </section>
+            <div class='tag'>
+                <p class='tag'>1</p>
+                <ul class='tag' feira='casa'>
+                    <li>Arroz</li>
+                    <li>Feijão</li>
+                </ul>
+                <ul class='tag' feira='escritorio empresa'>
+                    <li>Café</li>
+                    <li>Água</li>
+                </ul>
+                <ol id='aprovados' class='tag'>
+                    <li>Maria</li>
+                    <li>Pedro</li>
+                    <li>Ana</li>
+                </ol>
+                <div id='aninhado' class='tag'>
+                    <div class="tag">
+                        <section class='tag'>
+                            <span class='tag'>1</span>
+                            <p class='tag'>2</p>
+                            <span class='tag'>3</span>
+                        </section>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-    <script src="js/tag.js"></script>
-</body>
+        <script src="js/tag.js"></script>
+    </body>
 
 </html>
