@@ -1,21 +1,109 @@
 <!DOCTYPE html>
 <html>
 
-<head>
-    <meta charset="UTF-8">
-    <title>Cores</title>
-    <style>
-        /* 
+    <head>
+        <link href="https://fonts.googleapis.com/css?family=Roboto+Mono&display=swap" rel="stylesheet">
+        <meta charset="UTF-8">
+        <title>Cores</title>
+        <style>
+            /* 
             https://www.w3schools.com/colors/colors_hsl.asp
             
             https://coolors.co/
             http://paletton.com/
         */
-    </style>
-</head>
 
-<body>
+            /* #Context {
+                display: inline-block;
+                width: 600px;
+                height: 600px;
+                margin: 0;
+            } */
 
-</body>
+
+            body {
+                margin: 0;
+                background-color: white;
+            }
+
+            #Context {
+                display: flex;
+            }
+
+            #HEX {
+                display: block;
+                text-align: center;
+                color: white;
+                font-family: 'Roboto Mono', monospace;
+                font-weight: bold;
+                font-size: 50px;
+                height: 300px;
+                width: 300px;
+                background-color: #f67809;
+            }
+
+            #RGB {
+                display: block;
+                text-align: center;
+                color: white;
+                font-family: 'Roboto Mono', monospace;
+                font-weight: bold;
+                font-size: 50px;
+                height: 300px;
+                width: 300px;
+                background-color: rgb(55, 110, 220);
+
+            }
+
+            #RGBA {
+                display: block;
+                text-align: center;
+                color: white;
+                font-family: 'Roboto Mono', monospace;
+                font-weight: bold;
+                font-size: 50px;
+                height: 300px;
+                width: 300px;
+                background-color: rgba(255, 23, 131, 0.651);
+
+            }
+
+            #HSL {
+                display: block;
+                text-align: center;
+                color: white;
+                font-family: 'Roboto Mono', monospace;
+                font-weight: bold;
+                font-size: 45px;
+                height: 300px;
+                width: 300px;
+                background-color: hsl(299, 58%, 58%);
+
+            }
+
+            #HSLA {
+                display: block;
+                text-align: center;
+                color: white;
+                font-family: 'Roboto Mono', monospace;
+                font-weight: bold;
+                font-size: 45px;
+                height: 300px;
+                width: 300px;
+                background-color: hsla(299, 58%, 58%, 0.5);
+
+            }
+        </style>
+    </head>
+
+    <body>
+        <div id="Context">
+            <div id="HEX">Valores HEX #f67809</div>
+            <div id="RGB">RGB 55, 110, 220 </div>
+            <div id="RGBA">RGBA 255, 23, 131, 0.651</div>
+            <div id="HSL">HSL 55, 110, 220 </div>
+            <div id="HSLA">HSLA 55, 110, 220</div>
+        </div>
+    </body>
 
 </html>
