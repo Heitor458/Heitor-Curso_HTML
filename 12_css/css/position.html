@@ -1,26 +1,37 @@
 <!DOCTYPE html>
 <html>
 
-<head>
-    <meta charset="UTF-8">
-    <title>Position</title>
-    <style>
-        /* ... */
-    </style>
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <title>Position</title>
+        <style>
+            div {
+                font-size: 60px;
+                padding: 30px;
+                border: solid 5px #222;
 
-<body>
-    <div class="static">Static (Padrão)</div>
-    <div class="fixed">Fixed</div>
-    <div class="relative1">Relative</div>
-    <div class="absolute1">Absolute</div>
+            }
 
-    <div class="relative2">
-        <div class="absolute2"></div>
-    </div>
+            .static {
+                top: 100px;
+                left: 100px;
+                background-color: steelblue;
+            }
+        </style>
+    </head>
 
-    <div class="sticky">Sticky</div>
-    <p style="padding-bottom: 2000px;">Opa</p>
-</body>
+    <body>
+        <div class="static">Static (Padrão)</div>
+        <div class="fixed">Fixed</div>
+        <div class="relative1">Relative</div>
+        <div class="absolute1">Absolute</div>
+
+        <div class="relative2">
+            <div class="absolute2"></div>
+        </div>
+
+        <div class="sticky">Sticky</div>
+        <p style="padding-bottom: 2000px;">Opa</p>
+    </body>
 
 </html>
