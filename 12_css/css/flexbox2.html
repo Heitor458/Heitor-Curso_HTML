@@ -6,7 +6,30 @@
     <title>Flexbox #02</title>
     <link rel="stylesheet" href="css/tag.css">
     <style>
-        /* ... */
+        .flex-container div{
+            box-sizing: border-box;
+        }
+        
+        .flex-container{
+            display: flex;
+            height: 300px;
+            width: 300px;
+        }
+        /*Na linha abaixo o seguinte código faz com que  pegue o terceiro filho da flexconotainer*/
+        .flex-container div:nth-child(3){
+            background-color: indianred;
+            order: 1;/*Altera a ordem de Exibição  especificamente desse Item no caso o item 3*/
+            order: 0;
+            order: -1;/*Passa a ser o Primeiro*/
+            align-self: center;
+            align-self: flex-end;
+            align-self: flex-start;
+            align-self: stretch;
+
+        }
+        .flex-container div {
+            width: 100px;
+        }
     </style>
 </head>
 
