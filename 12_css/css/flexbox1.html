@@ -6,7 +6,54 @@
     <title>Flexbox #01</title>
     <link rel="stylesheet" href="css/tag.css">
     <style>
-        /* ... */
+        div{
+            border:solid 5px dodgerblue;
+            font-size: 40px;
+            margin: 5px;
+        }
+        .big{
+            font-size: 1.5em;
+
+        }
+        .flex-container{
+            display: flex; /*Por padrão ele organiza os elementos em linha */
+            flex-direction: column; /*Passa Definir o main axis como o eixo da colum e volta a organizar os elemntos em coluna */
+            flex-direction: column-reverse; /*Faz Um reverse e altera o modod de exebição das colunas definidas no HTML assim tornando as colunas de forma decrescente */
+            flex-direction: row-reverse; /*Faz com que os elementos dentro dessa div sejam exibidos da direita para a esquerda */
+            flex-direction: row; /*Passa a organizar os Elemntos em Linha*/
+            width: 50%;
+            flex-wrap: wrap;/*Quebra Linha*/
+            flex-wrap: wrap-reverse;
+            flex-flow: row wrap;
+            height: 300px; 
+            flex-flow: column-reverse wrap; /*Flex-flow Juta o flex wrap e o flex direction */
+            flex-flow: row wrap;
+
+            justify-content: flex-start;
+            justify-content: flex-end;
+            justify-content: center;
+            justify-content: space-around;
+            justify-content: space-between;       
+
+            /*Cross Axis*/ 
+            height: 400px;
+            align-items: stretch;/*Valor Padrão */   
+            align-items: baseline; /*Alinha de Acordo com a base do conteudo interno */
+            align-items: flex-start;
+            align-items: flex-end;
+            align-items: center;
+            
+            
+            
+            
+            /*Align Content usa quando há  Mais de uma linha*/
+            align-content: flex-start; /*Todas as Linhas vão para o Inicio do Flex Container*/
+            align-content: flex-end; /*Todas as Linhas vão para o Final do Flex Container*/
+            align-content: center; /*Todas as Linhas vão Centralizar dentro do Flex Container*/
+            align-content: space-around; /*Todas as Linhas vão Centralizar dentro do Flex Container*/
+            align-content: space-between; /*Todas as Linhas centralizar de acordo com os espaços entre os elementos  do Flex Container*/
+
+        }
     </style>
 </head>
 
