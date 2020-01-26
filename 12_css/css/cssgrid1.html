@@ -7,11 +7,10 @@
     <style>
         /* https://caniuse.com/#feat=css-grid */
         
-        html,
-        body {
+        html,body{
             margin: 20px;
-            height: calc(100% - 40px);
-            background-color: lightgray;
+            height: calc(100%-40px);
+            background-color: lightgray
         }
         
         div {
@@ -21,6 +20,40 @@
             font-size: 30px;
             border: solid 5px dodgerblue;
             background: #fff;
+        }
+        
+        body {
+            display: grid;
+            grid-template-columns: 50% 50% ;
+            grid-template-columns: repeat(4, 8.33% 8.33%) ;
+            grid-template-columns: repeat(12,8.33%);
+            grid-template-columns: repeat(11,100px)100px;  /*Aqui é só para mostrar que pode usar o repeat com outras propriedades*/
+            grid-template-columns: 200px 20% 1fr; /*Fr = unidade de medida 1fragmento*/
+            grid-template-columns:  3fr 6fr 3fr; /*Tipo de unidade para trabalhar com linhas e colunas*/
+            grid-template-rows: 50% 25% 12.5% 12.5%;
+            grid-template-rows: 100px 1fr; /*Aqui como há 4 conteudos no contexto do site  ele irá aplicar 100px e 1fragmento para os dois primeiros conteudos e os dois ultimos ele irá aplicar o que sobrou de espaço */
+            grid-template-rows: 100px auto; /*Nessa linha de código irá fazer com que seja aplicado os 100px soamente para o primeiro conteúdo e os demais irá se ajustar de forma igualitaria */
+            
+        }
+        .d8{
+            grid-column-start: 2;
+            grid-column-end:4;
+            grid-column-end: span 2 ;
+            grid-row-start:3;
+            grid-row-end: 5;
+            grid-row-end: span 2;
+        }
+        .d10,
+        .d11{
+            /*Podem Sobrepor*/
+            grid-column-start: 1;
+            grid-column-end:3; 
+            grid-row-start: 5;
+            grid-row-end: span1 ;
+            
+        }
+        .d10{
+            z-index: 10;
         }
     </style>
 </head>
