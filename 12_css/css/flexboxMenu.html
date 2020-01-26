@@ -65,6 +65,33 @@
             margin: 0px 10px;
             /* justify-content: space-around; */
         }
+        .menu-toggle {
+                float: right;
+                color: #eee;
+                background-color: #555;
+                border: solid 1px #777;
+                border-radius: 5px;
+                height: 40px;
+                padding: 10px 20px;
+                margin: 20px 15px;
+            }
+        @media(min-width: 679px) {
+                .menu-toggle {
+                    display: none;
+                }
+            }
+
+            @media(max-width: 680px) {
+                .menu {
+                    display: none;
+                }
+            }
+
+            @media(max-width: 950px) {
+                .autenticacao {
+                    display: none;
+                }
+            }
         /* ==================== */
     </style>
 </head>
@@ -76,6 +103,9 @@
                 <img src="http://files.cod3r.com.br/curso-web/logo.png" alt="Logo" />
             </a>
         </div>
+        <button class="menu-toggle">
+            <i class="fa fa-lg fa-bars"></i>
+        </button>
         <nav class="menu">
             <ul>
                 <li>
