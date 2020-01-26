@@ -20,6 +20,24 @@
             border: solid 5px dodgerblue;
             background: #fff;
         }
+        body{
+            display: grid;
+            grid-template-columns: [inicio]1fr 
+            [meio-1 metade-1] 1fr 
+            [meio-2 metade-2] 1fr[fim];
+            grid-template-rows:repeat(3,1fr);
+            grid-column-gap: 20px;
+            grid-row-gap: 20px;
+            grid-gap: 50px 10px ;/*Aqui estamos utilizando um shortcut aqui estaremos colocando 50px de gap nas linhas e depois 10px de gap nas colunas*/
+        }
+        .d1{
+            grid-row-start: metade-2;
+            grid-column-end: fim;
+            grid-column-end: meio-1/fim;
+            grid-row: 1 / span2 ;
+            /*row-star column-start row-end colunm-end*/
+            grid-area:1 / meio-1 / span 3 / fim ;
+        }
     </style>
 </head>
 
