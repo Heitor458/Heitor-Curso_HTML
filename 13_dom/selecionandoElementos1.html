@@ -9,8 +9,21 @@
     <div id="primeiro">#primeiro</div>
     <div>Segundo</div>
     <div class="terceiro ultimo">.terceiro .ultimo</div>
-    <script>              
-        // ...
+    <script>
+        /*Seleção de elemento apartir da DOM*/
+        document.getElementById('primeiro').classList.add('primeiro')/*Pegando Elementos pelo ID e adicionou a classe destaque */
+      
+        const divs = document.getElementsByTagName('div') /*Pegando elemento por nome*/
+        Array.from(divs).forEach(e => e.classList.remove('destaque'))/*pegando um elemntos div cria um array faz percorrer cada um deles removendo a calssse destaque */
+      
+         const divsArray = [...divs]/*Usando Spread para espalhar cada elemento dentro desse novo Array assim podendo fazer qualquer operação de Array  */
+         divsArray.forEach(e => e.classList.add('destaque'))/*Adiciona a Classe destaque para todos os elementos*/
+      
+        const ultimosElementos = document.getElementsByClassName('ultimo')
+        for(let e of ultimosElementos){
+            e.classList.remove('destaque')
+        }
     </script>
+
 </body>
 </html>
