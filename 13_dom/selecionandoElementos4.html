@@ -22,7 +22,32 @@
         <p>Fim</p>
     </div>
     <script>
-        // ...
+        function log () {
+            console.log(this);
+        }
+        HTMLCollection.prototype.log = log
+        HTMLElement.prototype.loog = log 
+        NodeList.prototype.log = log
+
+        const lista = document.querySelector('div ul')
+        lista.parentNode.log() /* PrentsNode Para Acessar o Pai da ul */
+        lista.childNodes.log() /* childNodes Para Acessar o filho da ul */
+    
+    const  primeiro = lista.firstChild
+    p.log() /*Irá Exibir o primeiro Elemento da Lista */
+    p.nextSibling.log()/*Pega o proximo Elemento do Primeiro Elemento */
+   
+   const ultimo = lista.lastChild
+   ultimo.log()
+   ultimo.previousSibling.log()
+
+   lista.children.log()/*Pegando o Elemnto */
+   lista.firstElementChild.log()/*Diferente do First Child trás de fato o primeiro elemento definido dentro da lista */
+   lista.lastChild.log()/*Pega o último elemento da Lista*/
+    lista.parentNode.previousSibling.log()/*Pegue o elemento irmão anterior ao parent da lista ou sejá ele irá me retornar o elemto div*/
+    lista.parentNode.nextElementSibling.log()
+
+    document.querySelectorAll('div ul li').log()/*Com esse tipo de seletor não corre o risco de pegar o textos inseridos no conteúdo apenas os elementos do seletor */
     </script>
 </body>
 
