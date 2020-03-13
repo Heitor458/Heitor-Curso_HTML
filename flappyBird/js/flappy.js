@@ -1,16 +1,16 @@
-function novoElemento(tagName, className){
+function novoElemento(tagName, className) {
     const elem = document.createElement(tagName)
     elem.className = className
     return elem
 }
 
-function Barreira(reversa = false){
+function Barreira(reversa = false) {
     this.elemento = novoElemento('div', 'barreira')
 
-    const borda = novoElemento('div','borda')
-    const corpo = novoElemento ('div', 'corpo')
+    const borda = novoElemento('div', 'borda')
+    const corpo = novoElemento('div', 'corpo')
     this.elemento.appendChild(reversa ? corpo : borda)
-    this.elemento.appendChild(reversa ?  borda : corpo)
+    this.elemento.appendChild(reversa ? borda : corpo)
 
     this.setAltura = altura => corpo.style.height = `${altura}px`
 }
@@ -46,7 +46,7 @@ function ParDeBarreiras(altura, abertura, x) {
 // Iniciando Teste para ver se a função construtora Funciona 
 // const b = new ParDeBarreiras(700,200,800)// Sendo na seguinte ordem Altura,Abertura e o x
 // document.querySelector('[wm-flappy]').appendChild(b.elemento) //esse "b" é objeto criado apartir da função construtora 
- 
+
 //Essa funçãoo será responsavel por controlar multiplas barreiras 
 function Barreiras(altura, largura, abertura, espaco, notificarPonto) {
     this.pares = [
@@ -56,7 +56,7 @@ function Barreiras(altura, largura, abertura, espaco, notificarPonto) {
         new ParDeBarreiras(altura, abertura, largura + espaco * 3)
     ]
 
-    const deslocamento = 5
+    const deslocamento = 3
     this.animar = () => {
         this.pares.forEach(par => {
             par.setX(par.getX() - deslocamento)
@@ -70,7 +70,7 @@ function Barreiras(altura, largura, abertura, espaco, notificarPonto) {
             const meio = largura / 2
             const cruzouOMeio = par.getX() + deslocamento >= meio
                 && par.getX() < meio
-            if(cruzouOMeio) notificarPonto()
+            if (cruzouOMeio) notificarPonto()
         })
     }
 }
@@ -106,30 +106,47 @@ function Passaro(alturaJogo) {
 }
 
 function Progresso() {
-    this.elemento = novoElemento('span','Progresso')
+    this.elemento = novoElemento('span', 'Progresso')
     this.atualizarPontos = pontos => {
         this.elemento.innerHTML = pontos
     }
     this.atualizarPontos(0)
 }
 
-function estaoSobrepostos(elementoA,elementoB){
+function estaoSobrepostos(elementoA, elementoB) {
     const a = elementoA.getBoundingClientRect()
     const b = elementoB.getBoundingClientRect()
 
-    const horizontal = a.left + a.width >= b.left && b.left + b.width >= a.left
-}
+    const horizontal = a.left + a.width >= b.left
+        && b.left + b.width >= a.left
 
-function flappyBrid(){
-    let pontos = 0 
+    const vertical = a.top + a.height >= b.top
+        && b.top + b.height >= a.top
+    return horizontal && vertical
+}
+    function colidiu(passaro, barreiras){
+        let colidiu = false 
+        barreiras.pares.forEach(ParDeBarreiras =>{
+            if(!colidiu){
+                const superior = ParDeBarreiras.superior.elemento
+                const inferior = ParDeBarreiras.inferior.elemento
+                colidiu =   estaoSobrepostos(passaro.elemento, superior)
+                || estaoSobrepostos(passaro.elemento, inferior)
+            }
+        })
+        return colidiu
+    }    
+
+function flappyBrid() {
+    let pontos = 0
 
     const areaDojogo = document.querySelector('[wm-flappy]')
     const altura = areaDojogo.clientHeight
     const largura = areaDojogo.clientWidth
 
     const progresso = new Progresso()
-    const  barreiras = new Barreiras(altura,largura,200,400,
-    () => progresso.atualizarPontos(++pontos))
+    const barreiras = new Barreiras(altura, largura, 200, 400,
+        () => progresso.atualizarPontos(++pontos))
 
     const passaro = new Passaro(altura)
 
@@ -142,10 +159,13 @@ function flappyBrid(){
         const temporizador = setInterval(() => {
             barreiras.animar()
             passaro.animar()
-        },20)
+            if(colidiu(passaro,barreiras)){
+                clearInterval(temporizador)
+            }
+        }, 20)
     }
 }
-            
+
 new flappyBrid().start()
 
 // Código referentes a teste !!
